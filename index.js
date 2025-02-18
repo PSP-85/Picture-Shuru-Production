@@ -13,35 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// document.querySelectorAll(".nav-link").forEach(link => {
-//   link.addEventListener("click", function (event) {
-//     event.preventDefault();
-    
-//     const targetId = this.getAttribute("href");
-//     const targetElement = document.querySelector(targetId);
-//     const navbar = document.querySelector(".navbar");
-//     const navbarToggler = document.querySelector(".navbar-toggler"); // Mobile menu button
-//     const navbarCollapse = document.querySelector(".navbar-collapse"); // Collapsible menu
 
-//     if (targetElement) {
-//       const navbarHeight = navbar.offsetHeight;
-//       const offset = 0; // Extra space to avoid cutting the heading
-//       const targetPosition = targetElement.offsetTop - navbarHeight - offset;
-
-//       window.scrollTo({
-//         top: targetPosition,
-//         behavior: "smooth",
-//       });
-//     }
-
-//     // Close the mobile menu after clicking a link
-//     if (navbarToggler && navbarCollapse.classList.contains("show")) {
-//       navbarCollapse.classList.remove("show"); // Hide the menu
-//       navbarToggler.setAttribute("aria-expanded", "false"); // Update accessibility
-//     }
-//   });
-// });
-
+// Preloader
 window.onload = function () {
   setTimeout(() => {
       document.querySelector(".preloader").classList.add("hide");
@@ -50,28 +23,42 @@ window.onload = function () {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-link");
+  const navLinks = document.querySelectorAll(".nav-link");
+  const sections = document.querySelectorAll("section");
 
-    function activateNavLink() {
-      let currentSection = "";
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 150; // Adjust offset as needed
-        if (window.scrollY >= sectionTop) {
-          currentSection = section.getAttribute("id");
-        }
-      });
+  // Function to update active nav-link based on h2 visibility
+  function updateActiveNavLink(entries, observer) {
+    entries.forEach(entry => {
+      const link = document.querySelector(`.nav-link[href="#${entry.target.closest('section').id}"]`);
+      
+      // Add active class when h2 inside section is in view
+      if (entry.isIntersecting) {
+        // Remove the active class from all nav-links first
+        navLinks.forEach(link => link.classList.remove("active"));
+        
+        // Add the active class to the current nav-link
+        link.classList.add("active");
+      }
+    });
+  }
 
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").includes(currentSection)) {
-          link.classList.add("active");
-        }
-      });
+  // IntersectionObserver options
+  const observerOptions = {
+    rootMargin: "0px 0px -50% 0px",  // Trigger when 50% of h2 element is in the viewport
+    threshold: 0  // Trigger when 0% of the h2 element is visible
+  };
+
+  // Initialize IntersectionObserver for h2 elements inside each section
+  const observer = new IntersectionObserver(updateActiveNavLink, observerOptions);
+
+  // Observe each h2 element within the sections
+  sections.forEach(section => {
+    const h2 = section.querySelector('h2');  // Find h2 element inside each section
+    if (h2) {
+      observer.observe(h2);  // Observe the h2 element
     }
-
-    window.addEventListener("scroll", activateNavLink);
   });
+});
   // Navbar Scroll Effect
   window.addEventListener("scroll", function () {
     if (window.scrollY > 50) {
@@ -101,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ScrollReveal().reveal(
     ".card-service, .portfolio-item, .contact-section",
     {
-      delay: 300,
+      delay: 200,
       distance: "50px",
       origin: "bottom",
       interval: 200,

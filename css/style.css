@@ -16,6 +16,7 @@
   html {
     /* background: var(--primary); */
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;  
 }
 
   .preloader {
@@ -77,12 +78,21 @@
   .nav-link {
     padding: 0 1.2rem !important;
     height: 80px;
+    
     display: flex;
     align-items: center;
     position: relative;
     color: var(--text) !important;
   }
-
+  .nav-link:hover {
+    color: var(--accent) !important;  /* Changes text color on hover */
+  }
+  .navbar {
+    z-index: 9999;  /* Ensure navbar stays on top */
+  }
+  .nav-link.active {
+    color: var(--accent) !important; /* Change text color on active */
+  }
   .nav-link::after {
     content: "";
     position: absolute;
@@ -175,9 +185,11 @@ padding: 20px;
   /* Section Enhancements */
 
   .section {
-    padding: 8rem 0;
+    padding: 60px 0;
     position: relative;
     background: #141414;
+    /* Adjust as needed */
+    
   }
 
   .btn-custom {
@@ -796,13 +808,6 @@ body {
   background: var(--primary);
   padding: auto;
 }
-
-
-
-
-
-
-
 
 
 

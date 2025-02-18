@@ -1,310 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pictureshuru Production | Creative Visual Studio</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div class="preloader">
-      <div class="spinner"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Picture Shuru Production</title>
+  <!-- Favicon for browsers -->
+  <link rel="icon" href="favicon_io/favicon-32x32.png" type="image/x-icon">
+  <!-- For modern browsers using PNG format -->
+  <link rel="icon" href="favicon_io/favicon-32x32.png" type="image/png">
+  <!-- For modern browsers using PNG format -->
+  <link rel="icon" href="media/favicon.png" type="image/png">
+
+
+  <!-- Apple Touch Icon (for iOS devices) -->
+  <link rel="apple-touch-icon" href="favicon_io/apple-touch-icon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="spinner"></div>
   </div>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img
-            src="media/Transparent BG logo (PSP)-01.png"
-            alt="Pictureshuru"
-          />
-        </a>
-        <button 
-      class="navbar-toggler" 
-      type="button" 
-      data-bs-toggle="collapse" 
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="media/Transparent BG logo (PSP)-01.png" alt="Pictureshuru" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#our-work">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="
+              background-image: url('media/carousel/jakob-owens-ycExgCMRggc-unsplash.jpg');
+            "></div>
+        <div class="carousel-item" style="
+              background-image: url('media/carousel/jametlene-reskp-HJljK-svzBQ-unsplash.jpg');
+            "></div>
+        <div class="carousel-item" style="
+              background-image: url('media/carousel/kal-visuals-3UcQtXSvA88-unsplash.jpg');
+            "></div>
+        <div class="carousel-item" style="
+              background-image: url('media/carousel/kal-visuals-I-nd-LSCY04-unsplash.jpg');
+            "></div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Picture Shuru Production </h1>
+      <p class="lead mb-4 fs-5" style="color: var(--text)">
+        Mumbai's Premier Production House for Impactful Visuals
+      </p>
+      <a href="#contact" class="btn btn-custom">Get in Touch</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p style="background-color: var(--secondary);">
+        At <span class="highlight">Pictureshuru Production</span>, we believe every frame has a story to tell. With a
+        passion for creativity and precision, we specialize in professional photography, high-quality videography, and
+        creative storytelling. Our goal is to bring your vision to life with stunning visuals that leave a lasting
+        impact.
+      </p>
+
+      <div class="about-features">
+        <div class="feature">
+          <span class="icon">📸</span>
+          <h3>Professional Photography</h3>
+          <p>We capture stunning and timeless moments with precision.</p>
+        </div>
+
+        <div class="feature">
+          <span class="icon">🎥</span>
+          <h3>High-Quality Videography</h3>
+          <p>Transforming stories into cinematic masterpieces.</p>
+        </div>
+
+        <div class="feature">
+          <span class="icon">✨</span>
+          <h3>Creative Storytelling</h3>
+          <p>Bringing emotions to life through visual narratives.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-category" style="background-color: var(--secondary);">
+          <h3>Social Media & Events</h3>
+          <ul>
+            <li>Social Media Videos & Reels</li>
+            <li>Educational Videos</li>
+            <li>Event Videos</li>
+            <li>Music Videos</li>
+            <li>Documentary Videos</li>
+            <li>Animated & Explainer Videos</li>
+          </ul>
+        </div>
+
+        <div class="service-category" style="background-color: var(--secondary);">
+          <h3>Films & Editing</h3>
+          <ul>
+            <li>Long Format Films</li>
+            <li>Short Format Films</li>
+            <li>Editing & Post-Production</li>
+            <li>Color Grading</li>
+            <li>VFX</li>
+            <li>B.T.S Content</li>
+            <li>Podcast Production</li>
+          </ul>
+        </div>
+
+        <div class="service-category" style="background-color: var(--secondary);">
+          <h3>Commercial & Branding</h3>
+          <ul>
+            <li>Brand Collaboration Videos</li>
+            <li>Wedding Films</li>
+            <li>Fashion Films</li>
+            <li>Print Shoots</li>
+            <li>Product Shoots</li>
+            <li>Jewellery Shoots</li>
+            <li>Calendar Shoots</li>
+            <li>Portfolio Shoots</li>
           </ul>
         </div>
       </div>
-    </nav>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-      <div
-        id="heroCarousel"
-        class="carousel slide carousel-fade"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div
-            class="carousel-item active"
-            style="
-              background-image: url('media/jakob-owens-ycExgCMRggc-unsplash.jpg');
-            "
-          ></div>
-          <div
-            class="carousel-item"
-            style="
-              background-image: url('media/jametlene-reskp-HJljK-svzBQ-unsplash.jpg');
-            "
-          ></div>
-          <div
-            class="carousel-item"
-            style="
-              background-image: url('media/kal-visuals-3UcQtXSvA88-unsplash.jpg');
-            "
-          ></div>
-          <div
-            class="carousel-item"
-            style="
-              background-image: url('media/kal-visuals-I-nd-LSCY04-unsplash.jpg');
-            "
-          ></div>
+  <section id="our-work" class="section">
+    <div class="container">
+      <h2 class="text-center mb-5" style="font-size: 2.5rem; font-weight: bold;">Our Projects</h2>
+
+      <div class="work-grid">
+        <div class="work-item large">
+          <a href="https://www.instagram.com/reel/C8uBoaWSIt4/?igsh=YWJocHVxMTZ5YzRv" target="_blank">
+            <img src="media/projects/Screenshot 2025-02-14 at 4.30.33 PM.png" alt="Cinematic Reel" loading="lazy">
+            <div class="overlay">
+              <h4><i class="fa-solid fa-link"></i> Digital Ad</h4>
+            </div>
+          </a>
+        </div>
+
+        <div class="work-item">
+          <a href="https://www.youtube.com/watch?v=aZ9wKc8joSY" target="_blank">
+            <img src="media/projects/Screenshot 2025-02-14 at 4.35.08 PM.png" alt="Short Film" loading="lazy">
+            <div class="overlay">
+              <h4><i class="fa-solid fa-link"></i> Music Video</h4>
+            </div>
+          </a>
+        </div>
+
+        <div class="work-item tall">
+          <a href="https://www.instagram.com/reel/DA0dp11o6Qn/?igsh=ZnFkMndzc21mZXNv" target="_blank">
+            <img src="media/projects/Screenshot 2025-02-14 at 5.10.42 PM.png" alt="Instagram Reel" loading="lazy">
+            <div class="overlay">
+              <h4><i class="fa-solid fa-link"></i> Instagram Reel</h4>
+            </div>
+          </a>
+        </div>
+
+        <div class="work-item">
+          <a href="https://www.youtube.com/watch?v=iLVwyqBWvwk" target="_blank">
+            <img src="media/projects/Screenshot 2025-02-14 at 5.24.34 PM.png" alt="Documentary Teaser" loading="lazy">
+            <div class="overlay">
+              <h4><i class="fa-solid fa-link"></i> Music Video</h4>
+            </div>
+          </a>
+        </div>
+
+        <div class="work-item">
+          <a href="https://youtu.be/ZJq7rPGpeJ4?feature=shared" target="_blank">
+            <img src="media/projects/Screenshot 2025-02-14 at 5.12.44 PM.png" alt="Wedding Highlight" loading="lazy">
+            <div class="overlay">
+              <h4><i class="fa-solid fa-link"></i> Digital Ad</h4>
+            </div>
+          </a>
+        </div>
+
+        <div class="work-item wide">
+          <a href="https://www.youtube.com/watch?v=OxWvy1XH7cg" target="_blank">
+            <img src="media/projects/Screenshot 2025-02-17 at 10.23.47 PM.png" alt="Music Video" loading="lazy">
+            <div class="overlay">
+              <h4><i class="fa-solid fa-link"></i> Music Video</h4>
+            </div>
+          </a>
+        </div>
+
+        <div class="work-item">
+          <a href="https://www.youtube.com/watch?v=m-BjMXl3u-Q" target="_blank">
+            <img src="media/projects/Screenshot 2025-02-14 at 5.23.19 PM.png" alt="Project 7" loading="lazy">
+            <div class="overlay">
+              <h4><i class="fa-solid fa-link"></i> Digital Ad</h4>
+            </div>
+          </a>
+        </div>
+        <div class="work-item">
+          <a href="https://www.instagram.com/reel/C1elVtwq3V0/?igsh=MWE5dXl4N2Y5ZzI5cg==" target="_blank">
+            <img src="media/projects/toolzin.com-C1elVtwq3V0-1.jpg" alt="Project 7" loading="lazy">
+            <div class="overlay">
+              <h4><i class="fa-solid fa-link"></i> Digital Ad</h4>
+            </div>
+          </a>
+        </div>
+        <div class="work-item">
+          <a href="https://www.instagram.com/reel/DF7Gk1CRwq7/?igsh=bG1rYm50YXc0bnB6 target=" target="_blank">
+            <img src="media/projects/toolzin.com-DF7Gk1CRwq7-1.jpg" alt="Project 7" loading="lazy">
+            <div class="overlay">
+              <h4><i class="fa-solid fa-link"></i> Digital Ad</h4>
+            </div>
+          </a>
+        </div>
+        <div class="work-item">
+          <a href="https://www.instagram.com/reel/DEfjEwZMICB/?igsh=MTdrYWhsaHh6enk2Yg==" target="_blank">
+            <img src="media/projects/toolzin.com-DEfjEwZMICB-1.jpg" alt="Project 7" loading="lazy">
+            <div class="overlay">
+              <h4><i class="fa-solid fa-link"></i> Digital Ad</h4>
+            </div>
+          </a>
+        </div>
+        <div class="work-item">
+          <a href="https://www.instagram.com/reel/C7rKGnBJhJf/?igsh=cXIzd3pibHVpN3M1" target="_blank">
+            <img src="media/projects/toolzin.com-C7rKGnBJhJf-1.jpg" alt="Project 7" loading="lazy">
+            <div class="overlay">
+              <h4><i class="fa-solid fa-link"></i> Digital Ad</h4>
+            </div>
+          </a>
+        </div>
+        <br>
+      </div>
+    </div>
+    <section>
+
+      <div class="container">
+
+
+        <h2 style="text-align: center; font-size: 2.5rem; font-weight: bold;" class="pt-3 pb-3">Promotions</h2>
+        <div class="work-grid">
+
+
+          <div class="work-item">
+            <a href="https://www.instagram.com/reel/C7a3A7eysnx/?igsh=MWw0anlxOWM4Y2IxNw==">
+              <img src="media/promotions/toolzin.com-C7a3A7eysnx-1.jpg" alt="Project 7" loading="lazy">
+              <div class="overlay">
+                <h4><i class="fa-solid fa-link"></i> Digital Ad</h4>
+              </div>
+            </a>
+          </div>
+          <div class="work-item">
+            <a href="https://www.instagram.com/reel/C_sYkHZovi4/?igsh=MXFycXUzc3ZqODFzNg==">
+              <img src="media/promotions/toolzin.com-C_sYkHZovi4-1.jpg" alt="Project 7" loading="lazy">
+              <div class="overlay">
+                <h4><i class="fa-solid fa-link"></i> Digital Ad</h4>
+              </div>
+            </a>
+          </div>
+          <div class="work-item">
+            <a href="https://www.instagram.com/reel/C_qWArEIJz3/?igsh=MTB6eTBmNWd5MDljOA==">
+              <img src="media/promotions/toolzin.com-C_qWArEIJz3-1.jpg" alt="Project 7" loading="lazy">
+              <div class="overlay">
+                <h4><i class="fa-solid fa-link"></i> Digital Ad</h4>
+              </div>
+            </a>
+          </div>
+          <div class="work-item">
+            <a href="https://www.instagram.com/reel/C6bJmEbIr5N/?igsh=cm40NGZnZHRmbmEw">
+              <img src="media/promotions/toolzin.com-C6bJmEbIr5N-1.jpg" alt="Project 7" loading="lazy">
+              <div class="overlay">
+                <h4><i class="fa-solid fa-link"></i> Digital Ad</h4>
+              </div>
+            </a>
+          </div>
+          <div class="work-item">
+            <a href="https://www.instagram.com/reel/C6QnEydxhoH/?igsh=MWhyMTc2aG14cjdmYg==">
+              <img src="media/promotions/toolzin.com-C6QnEydxhoH-1.jpg" alt="Project 7" loading="lazy">
+              <div class="overlay">
+                <h4><i class="fa-solid fa-link"></i> Digital Ad</h4>
+              </div>
+            </a>
+          </div>
+          <div class="work-item">
+            <a href="https://www.instagram.com/reel/C5n2dCNP3GP/?igsh=MWZpaW1uaHFva3lzbA==">
+              <img src="media/promotions/toolzin.com-C5n2dCNP3GP-1.jpg" alt="Project 7" loading="lazy">
+              <div class="overlay">
+                <h4><i class="fa-solid fa-link"></i> Digital Ad</h4>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="hero-content">
-        <h1 class="hero-title">Picture Shuru Production </h1>
-        <p class="lead mb-4 fs-5" style="color: var(--text)">
-          Mumbai's Premier Production House for Impactful Visuals
-        </p>
-        <a href="#contact" class="btn btn-custom">Get in Touch</a>
       </div>
     </section>
-
-    <section id="about">
-        <div class="container">
-          <h2>About Us</h2>
-          <p style="background-color: var(--secondary);">
-            At <span class="highlight">Pictureshuru Production</span>, we believe every frame has a story to tell. With a passion for creativity and precision, we specialize in professional photography, high-quality videography, and creative storytelling. Our goal is to bring your vision to life with stunning visuals that leave a lasting impact.
-          </p>
-      
-          <div class="about-features">
-            <div class="feature">
-              <span class="icon">📸</span>
-              <h3>Professional Photography</h3>
-              <p>We capture stunning and timeless moments with precision.</p>
-            </div>
-      
-            <div class="feature">
-              <span class="icon">🎥</span>
-              <h3>High-Quality Videography</h3>
-              <p>Transforming stories into cinematic masterpieces.</p>
-            </div>
-      
-            <div class="feature">
-              <span class="icon">✨</span>
-              <h3>Creative Storytelling</h3>
-              <p>Bringing emotions to life through visual narratives.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-  
-    <section id="services">
-        <div class="container">
-          <h2>Our Services</h2>
-          <div class="services-grid">
-            <div class="service-category" style="background-color: var(--secondary);">
-              <h3>Social Media & Events</h3>
-              <ul>
-                <li>Social Media Videos & Reels</li>
-                <li>Educational Videos</li>
-                <li>Event Videos</li>
-                <li>Music Videos</li>
-                <li>Documentary Videos</li>
-                <li>Animated & Explainer Videos</li>
-              </ul>
-            </div>
-      
-            <div class="service-category" style="background-color: var(--secondary);">
-              <h3>Films & Editing</h3>
-              <ul>
-                <li>Long Format Films</li>
-                <li>Short Format Films</li>
-                <li>Editing & Post-Production</li>
-                <li>Color Grading</li>
-                <li>VFX</li>
-                <li>B.T.S Content</li>
-                <li>Podcast Production</li>
-              </ul>
-            </div>
-      
-            <div class="service-category" style="background-color: var(--secondary);">
-              <h3>Commercial & Branding</h3>
-              <ul>
-                <li>Brand Collaboration Videos</li>
-                <li>Wedding Films</li>
-                <li>Fashion Films</li>
-                <li>Print Shoots</li>
-                <li>Product Shoots</li>
-                <li>Jewellery Shoots</li>
-                <li>Calendar Shoots</li>
-                <li>Portfolio Shoots</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="our-work" class="section">
-        <div class="container">
-          <h2 class="text-center mb-5" style="font-size: 2.5rem; font-weight: bold;">Our Projects</h2>
-          
-          <div class="work-grid">
-            <div class="work-item large">
-              <a href="https://www.instagram.com/reel/C8uBoaWSIt4/?igsh=YWJocHVxMTZ5YzRv" target="_blank">
-                <img src="media/Screenshot 2025-02-14 at 4.30.33 PM.png" alt="Cinematic Reel" loading="lazy">
-                <div class="overlay"><h4><i class="fa-solid fa-link"></i> Digital Ad</h4></div>
-              </a>
-            </div>
-      
-            <div class="work-item">
-              <a href="https://www.youtube.com/watch?v=aZ9wKc8joSY" target="_blank">
-                <img src="media/Screenshot 2025-02-14 at 4.35.08 PM.png" alt="Short Film" loading="lazy">
-                <div class="overlay"><h4><i class="fa-solid fa-link"></i> Music Video</h4></div>
-              </a>
-            </div>
-      
-            <div class="work-item tall">
-              <a href="https://www.instagram.com/reel/DA0dp11o6Qn/?igsh=ZnFkMndzc21mZXNv" target="_blank">
-                <img src="media/Screenshot 2025-02-14 at 5.10.42 PM.png" alt="Instagram Reel" loading="lazy">
-                <div class="overlay"><h4><i class="fa-solid fa-link"></i> Instagram Reel</h4></div>
-              </a>
-            </div>
-      
-            <div class="work-item">
-              <a href="https://www.youtube.com/watch?v=iLVwyqBWvwk" target="_blank">
-                <img src="media/Screenshot 2025-02-14 at 5.24.34 PM.png" alt="Documentary Teaser" loading="lazy">
-                <div class="overlay"><h4><i class="fa-solid fa-link"></i> Music Video</h4></div>
-              </a>
-            </div>
-      
-            <div class="work-item">
-              <a href="https://youtu.be/ZJq7rPGpeJ4?feature=shared" target="_blank">
-                <img src="media/Screenshot 2025-02-14 at 5.12.44 PM.png" alt="Wedding Highlight" loading="lazy">
-                <div class="overlay"><h4><i class="fa-solid fa-link"></i> Digital Ad</h4></div>
-              </a>
-            </div>
-      
-            <div class="work-item wide">
-              <a href="https://www.youtube.com/watch?v=OxWvy1XH7cg" target="_blank">
-                <img src="media/Screenshot 2025-02-17 at 10.23.47 PM.png" alt="Music Video" loading="lazy">
-                <div class="overlay"><h4><i class="fa-solid fa-link"></i> Music Video</h4></div>
-              </a>
-            </div>
-      
-            <div class="work-item">
-              <a href="https://www.youtube.com/watch?v=m-BjMXl3u-Q" target="_blank">
-                <img src="media/Screenshot 2025-02-14 at 5.23.19 PM.png" alt="Project 7" loading="lazy">
-                <div class="overlay"><h4><i class="fa-solid fa-link"></i> Digital Ad</h4></div>
-              </a>
-            </div>
-            <div class="work-item">
-              <a href="https://www.instagram.com/reel/C1elVtwq3V0/?igsh=MWE5dXl4N2Y5ZzI5cg==" target="_blank">
-                <img src="media/toolzin.com-C1elVtwq3V0-1.jpg" alt="Project 7" loading="lazy">
-                <div class="overlay"><h4><i class="fa-solid fa-link"></i> Digital Ad</h4></div>
-              </a>
-            </div>
-            <div class="work-item">
-              <a href="https://www.instagram.com/reel/DF7Gk1CRwq7/?igsh=bG1rYm50YXc0bnB6 target=" target="_blank">
-                <img src="media/toolzin.com-DF7Gk1CRwq7-1.jpg" alt="Project 7" loading="lazy">
-                <div class="overlay"><h4><i class="fa-solid fa-link"></i> Digital Ad</h4></div>
-              </a>
-            </div>
-            <div class="work-item">
-              <a href="https://www.instagram.com/reel/DEfjEwZMICB/?igsh=MTdrYWhsaHh6enk2Yg==" target="_blank">
-                <img src="media/toolzin.com-DEfjEwZMICB-1.jpg" alt="Project 7" loading="lazy">
-                <div class="overlay"><h4><i class="fa-solid fa-link"></i> Digital Ad</h4></div>
-              </a>
-            </div>
-            <div class="work-item">
-              <a href="https://www.instagram.com/reel/C7rKGnBJhJf/?igsh=cXIzd3pibHVpN3M1" target="_blank">
-                <img src="media/toolzin.com-C7rKGnBJhJf-1.jpg" alt="Project 7" loading="lazy">
-                <div class="overlay"><h4><i class="fa-solid fa-link"></i> Digital Ad</h4></div>
-              </a>
-            </div>
-            <div class="work-item">
-              <a href="https://www.instagram.com/reel/C7a3A7eysnx/?igsh=MWw0anlxOWM4Y2IxNw==">
-                <img src="media/toolzin.com-C7a3A7eysnx-1.jpg" alt="Project 7" loading="lazy">
-                <div class="overlay"><h4><i class="fa-solid fa-link"></i> Digital Ad</h4></div>
-              </a>
-            </div>
-            <div class="work-item">
-              <a href="https://www.instagram.com/reel/C_sYkHZovi4/?igsh=MXFycXUzc3ZqODFzNg==">
-                <img src="media/toolzin.com-C_sYkHZovi4-1.jpg" alt="Project 7" loading="lazy">
-                <div class="overlay"><h4><i class="fa-solid fa-link"></i> Digital Ad</h4></div>
-              </a>
-            </div>
-            <div class="work-item">
-              <a href="https://www.instagram.com/reel/C_qWArEIJz3/?igsh=MTB6eTBmNWd5MDljOA==">
-                <img src="media/toolzin.com-C_qWArEIJz3-1.jpg" alt="Project 7" loading="lazy">
-                <div class="overlay"><h4><i class="fa-solid fa-link"></i> Digital Ad</h4></div>
-              </a>
-            </div>
-            <div class="work-item">
-              <a href="https://www.instagram.com/reel/C6bJmEbIr5N/?igsh=cm40NGZnZHRmbmEw">
-                <img src="media/toolzin.com-C6bJmEbIr5N-1.jpg" alt="Project 7" loading="lazy">
-                <div class="overlay"><h4><i class="fa-solid fa-link"></i> Digital Ad</h4></div>
-              </a>
-            </div>
-            <div class="work-item">
-              <a href="https://www.instagram.com/reel/C6QnEydxhoH/?igsh=MWhyMTc2aG14cjdmYg==">
-                <img src="media/toolzin.com-C6QnEydxhoH-1.jpg" alt="Project 7" loading="lazy">
-                <div class="overlay"><h4><i class="fa-solid fa-link"></i> Digital Ad</h4></div>
-              </a>
-            </div>
-            <div class="work-item">
-              <a href="https://www.instagram.com/reel/C5n2dCNP3GP/?igsh=MWZpaW1uaHFva3lzbA==">
-                <img src="media/toolzin.com-C5n2dCNP3GP-1.jpg" alt="Project 7" loading="lazy">
-                <div class="overlay"><h4><i class="fa-solid fa-link"></i> Digital Ad</h4></div>
-              </a>
-            </div>
-          </div>
-      
-        </div>
-      </section>
-      <!-- <section id="canva-stock" class="container my-5">
+    </div>
+  </section>
+  <!-- <section id="canva-stock" class="container my-5">
         <h2 class="text-center mb-4" style="font-size: 2.5rem;
         font-weight: bold;
         color: var(--text);">Canva Stock Images</h2>
@@ -315,326 +348,313 @@
       </section>
  -->
 
-      
-
- <section id="canva-stock" class="section mb-0 p-0 pt-5" style="background: var(--primary);">
-  <div class="container">
-    <h4 class="text-center " style="font-weight: bold; ">Canva Stock Footage</h4>
-    <div class="canva-stock-grid pt-3">
-      <div class="canva-stock-item">
-        <a href="https://www.canva.com/design/DAGfZKw3kNQ/kh1erCnGd07lpkFsb_9H0Q/edit" target="_blank">
-          <img src="media/WhatsApp Image 2025-02-14 at 17.15.44.jpeg" alt="Stock Image 1" loading="lazy">
-          <div class="canva-overlay"><h4><i class="fa-solid fa-link"></i> Stock Image 1</h4></div>
-        </a>
-      </div>
-      <div class="canva-stock-item">
-        <a href="https://www.canva.com/design/DAGfZKw3kNQ/kh1erCnGd07lpkFsb_9H0Q/edit" target="_blank">
-          <img src="media/WhatsApp Image 2025-02-14 at 17.15.43 (2).jpeg" alt="Stock Image 2" loading="lazy">
-          <div class="canva-overlay"><h4><i class="fa-solid fa-link"></i> Stock Image 2</h4></div>
-        </a>
-      </div>
-      <!-- Repeat for more stock images -->
-    </div>
-  </div>
-</section>
 
 
-
-
-<section id="countries-we-work" class="text-center pt-5 ">
-  <div class="container">
-    <h2 class="mb-4 fw-bold pb-4" style="font-weight: bold;">Countries We Work With</h2>
-
-    <!-- Mobile: Marquee container for scrolling flags -->
-    <div class="marquee-container d-sm-none">
-      <div class="marquee-content d-flex">
-        <!-- Mobile flags (duplicated for seamless scrolling) -->
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/india.jpg" alt="India" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">India</p>
-          </div>
-        </div>
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/saudi_arab.png" alt="Saudi Arab" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">Saudi Arab</p>
-          </div>
-        </div>
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/Kazakhstan.png" alt="Kazakhstan" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">Kazakhstan</p>
-          </div>
-        </div>
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/USA.png" alt="USA" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">USA</p>
-          </div>
-        </div>
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/UAE.jpg" alt="UAE" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">UAE</p>
-          </div>
-        </div>
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/qatar.png" alt="Qatar" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">Qatar</p>
-          </div>
-        </div>
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/maldives.png" alt="Maldives" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">Maldives</p>
-          </div>
-        </div>
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/thailand.jpg" alt="Thailand" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">Thailand</p>
-          </div>
-        </div>
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/Vietnam.jpg" alt="Vietnam" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">Vietnam</p>
-          </div>
-        </div>
-
-        <!-- Duplicated items for seamless scrolling -->
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/india.jpg" alt="India" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">India</p>
-          </div>
-        </div>
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/saudi_arab.png" alt="Saudi Arab" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">Saudi Arab</p>
-          </div>
-        </div>
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/Kazakhstan.png" alt="Kazakhstan" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">Kazakhstan</p>
-          </div>
-        </div>
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/USA.png" alt="USA" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">USA</p>
-          </div>
-        </div>
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/UAE.jpg" alt="UAE" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">UAE</p>
-          </div>
-        </div>
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/qatar.png" alt="Qatar" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">Qatar</p>
-          </div>
-        </div>
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/maldives.png" alt="Maldives" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">Maldives</p>
-          </div>
-        </div>
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/thailand.jpg" alt="Thailand" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">Thailand</p>
-          </div>
-        </div>
-        <div class="country-scroll-item">
-          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-            <img src="media/flags/Vietnam.jpg" alt="Vietnam" class="img-fluid rounded mobile-flag-height">
-            <p class="mt-2 mb-0 text-white fs-sm">Vietnam</p>
-          </div>
-        </div>
-        <!-- More repeated items as needed... -->
-      </div>
-    </div>
-    <!-- Desktop View: 3 Flags per Row and 3 Rows Grid Layout -->
-    <div class="row justify-content-center d-none d-md-flex g-0">
-      <!-- Row 1 -->
-      <div class="col-2 mb-3 d-flex justify-content-center">
-        <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-          <img src="media/flags/india.jpg" alt="India" class="img-fluid rounded"
-            style="width: 100%; height: 80px; object-fit: cover;">
-          <p class="mt-2 text-white">India</p>
-        </div>
-      </div>
-      <div class="col-2 mb-3 d-flex justify-content-center">
-        <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-          <img src="media/flags/UAE.jpg" alt="UAE" class="img-fluid rounded"
-            style="width: 100%; height: 80px; object-fit: cover;">
-          <p class="mt-2 text-white">UAE</p>
-        </div>
-      </div>
-      <div class="col-2 mb-3 d-flex justify-content-center">
-        <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-          <img src="media/flags/thailand.jpg" alt="Thailand" class="img-fluid rounded"
-            style="width: 100%; height: 80px; object-fit: cover;">
-          <p class="mt-2 text-white">Thailand</p>
-        </div>
-      </div>
-      <div class="col-2 mb-3 d-flex justify-content-center">
-        <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-          <img src="media/flags/Kazakhstan.png" alt="Kazakhstan" class="img-fluid rounded"
-            style="width: 100%; height: 80px; object-fit: cover;">
-          <p class="mt-2 text-white">Kazakhstan</p>
-        </div>
-      </div>
-      <div class="col-2 mb-3 d-flex justify-content-center">
-        <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-          <img src="media/flags/Vietnam.jpg" alt="Vietnam" class="img-fluid rounded"
-            style="width: 100%; height: 80px; object-fit: cover;">
-          <p class="mt-2 text-white">Vietnam</p>
-        </div>
-      </div>
-    
-      <!-- Row 2 -->
-      <div class="col-2 mb-3 d-flex justify-content-center">
-        <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-          <img src="media/flags/qatar.png" alt="Qatar" class="img-fluid rounded"
-            style="width: 100%; height: 80px; object-fit: cover;">
-          <p class="mt-2 text-white">Qatar</p>
-        </div>
-      </div>
-      <div class="col-2 mb-3 d-flex justify-content-center">
-        <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-          <img src="media/flags/USA.png" alt="USA" class="img-fluid rounded"
-            style="width: 100%; height: 80px; object-fit: cover;">
-          <p class="mt-2 text-white">USA</p>
-        </div>
-      </div>
-      <div class="col-2 mb-3 d-flex justify-content-center">
-        <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-          <img src="media/flags/maldives.png" alt="Maldives" class="img-fluid rounded"
-            style="width: 100%; height: 80px; object-fit: cover;">
-          <p class="mt-2 text-white">Maldives</p>
-        </div>
-      </div>
-      <div class="col-2 mb-3 d-flex justify-content-center">
-        <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
-          <img src="media/flags/saudi_arab.png" alt="Saudi Arab" class="img-fluid rounded"
-            style="width: 100%; height: 80px; object-fit: cover;">
-          <p class="mt-2 text-white">Saudi Arab</p>
-        </div>
-      </div>
-    
-    </div>
-
-
-
-
-
-
-
-
-
-
-  </div>
-</section>
-
-
-
-
-
-    <section class="container-fluid text-center px-5 pt-5 pb-5" id="portfolio">
-      <h2 style="font-weight: 2.5rem; font-weight: bold;" class="pb-4 ">Our Casting Projects</h2>
-
-      <!-- <p>Explore my work as a casting director.</p> -->
-      <a href="As a Casting Director.html" class="btn btn-custom">View Casting Projects</a>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    <section id="contact" class="section pt-5">
-      <div class="container">
-        <div class="contact-section">
-          <h2 class="section-title text-center">Connect with us</h2>
-          <div class="row">
-            <div class="col-lg-6">
-              <form id="contact-form">
-                <div class="mb-4">
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="user_name"
-                    placeholder="Your Name"
-                    required
-                  />
-                </div>
-                <div class="mb-4">
-                  <input
-                    type="email"
-                    class="form-control"
-                    name="user_email"
-                    placeholder="Your Email"
-                    required
-                  />
-                </div>
-                <div class="mb-4" >
-                  <textarea
-                    class="form-control"
-                    rows="5"
-                    name="message"
-                    placeholder="Description"
-                    required 
-                  ></textarea>
-                </div>
-                <button type="submit" class="btn btn-custom w-100">Send Message</button>
-              </form>
-              <p id="response-message" class="text-center mt-3"></p>
+  <section id="canva-stock" class="section mb-0 p-0 pt-5" style="background: var(--primary);">
+    <div class="container">
+      <h4 class="text-center " style="font-weight: bold; ">Canva Stock Footage</h4>
+      <div class="canva-stock-grid pt-3">
+        <div class="canva-stock-item">
+          <a href="https://www.canva.com/design/DAGfZKw3kNQ/kh1erCnGd07lpkFsb_9H0Q/edit" target="_blank">
+            <img src="media/projects/WhatsApp Image 2025-02-14 at 17.15.44.jpeg" alt="Stock Image 1" loading="lazy">
+            <div class="canva-overlay">
+              <h4><i class="fa-solid fa-link"></i> Stock Image 1</h4>
             </div>
-            <div class="col-lg-6 mt-5 mt-lg-0">
-              <div class="contact-info">
-                <h4>Contact</h4>
-                <p>+91 9893030627 <br>+971 55 583 6970 <br> pictureshuruproduction@gmail.com</p>
-                <div class="social-links mt-4">
-                  <a href="https://instagram.com/yourprofile" class="btn btn-outline-light btn-social">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </div>
+          </a>
+        </div>
+        <div class="canva-stock-item">
+          <a href="https://www.canva.com/design/DAGfZKw3kNQ/kh1erCnGd07lpkFsb_9H0Q/edit" target="_blank">
+            <img src="media/projects/WhatsApp Image 2025-02-14 at 17.15.43 (2).jpeg" alt="Stock Image 2" loading="lazy">
+            <div class="canva-overlay">
+              <h4><i class="fa-solid fa-link"></i> Stock Image 2</h4>
+            </div>
+          </a>
+        </div>
+        <!-- Repeat for more stock images -->
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section id="countries-we-work" class="text-center pt-5 ">
+    <div class="container">
+      <h2 class="mb-4 fw-bold pb-4" style="font-weight: bold;">Countries We Work With</h2>
+
+      <!-- Mobile: Marquee container for scrolling flags -->
+      <div class="marquee-container d-sm-none">
+        <div class="marquee-content d-flex">
+          <!-- Mobile flags (duplicated for seamless scrolling) -->
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/india.jpg" alt="India" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">India</p>
+            </div>
+          </div>
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/saudi_arab.png" alt="Saudi Arab" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">Saudi Arab</p>
+            </div>
+          </div>
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/Kazakhstan.png" alt="Kazakhstan" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">Kazakhstan</p>
+            </div>
+          </div>
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/USA.png" alt="USA" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">USA</p>
+            </div>
+          </div>
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/UAE.jpg" alt="UAE" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">UAE</p>
+            </div>
+          </div>
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/qatar.png" alt="Qatar" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">Qatar</p>
+            </div>
+          </div>
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/maldives.png" alt="Maldives" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">Maldives</p>
+            </div>
+          </div>
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/thailand.jpg" alt="Thailand" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">Thailand</p>
+            </div>
+          </div>
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/Vietnam.jpg" alt="Vietnam" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">Vietnam</p>
+            </div>
+          </div>
+
+          <!-- Duplicated items for seamless scrolling -->
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/india.jpg" alt="India" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">India</p>
+            </div>
+          </div>
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/saudi_arab.png" alt="Saudi Arab" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">Saudi Arab</p>
+            </div>
+          </div>
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/Kazakhstan.png" alt="Kazakhstan" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">Kazakhstan</p>
+            </div>
+          </div>
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/USA.png" alt="USA" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">USA</p>
+            </div>
+          </div>
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/UAE.jpg" alt="UAE" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">UAE</p>
+            </div>
+          </div>
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/qatar.png" alt="Qatar" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">Qatar</p>
+            </div>
+          </div>
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/maldives.png" alt="Maldives" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">Maldives</p>
+            </div>
+          </div>
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/thailand.jpg" alt="Thailand" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">Thailand</p>
+            </div>
+          </div>
+          <div class="country-scroll-item">
+            <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+              <img src="media/flags/Vietnam.jpg" alt="Vietnam" class="img-fluid rounded mobile-flag-height">
+              <p class="mt-2 mb-0 text-white fs-sm">Vietnam</p>
+            </div>
+          </div>
+          <!-- More repeated items as needed... -->
+        </div>
+      </div>
+      <!-- Desktop View: 3 Flags per Row and 3 Rows Grid Layout -->
+      <div class="row justify-content-center d-none d-md-flex g-0">
+        <!-- Row 1 -->
+        <div class="col-2 mb-3 d-flex justify-content-center">
+          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+            <img src="media/flags/india.jpg" alt="India" class="img-fluid rounded"
+              style="width: 100%; height: 80px; object-fit: cover;">
+            <p class="mt-2 text-white">India</p>
+          </div>
+        </div>
+        <div class="col-2 mb-3 d-flex justify-content-center">
+          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+            <img src="media/flags/UAE.jpg" alt="UAE" class="img-fluid rounded"
+              style="width: 100%; height: 80px; object-fit: cover;">
+            <p class="mt-2 text-white">UAE</p>
+          </div>
+        </div>
+        <div class="col-2 mb-3 d-flex justify-content-center">
+          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+            <img src="media/flags/thailand.jpg" alt="Thailand" class="img-fluid rounded"
+              style="width: 100%; height: 80px; object-fit: cover;">
+            <p class="mt-2 text-white">Thailand</p>
+          </div>
+        </div>
+        <div class="col-2 mb-3 d-flex justify-content-center">
+          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+            <img src="media/flags/Kazakhstan.png" alt="Kazakhstan" class="img-fluid rounded"
+              style="width: 100%; height: 80px; object-fit: cover;">
+            <p class="mt-2 text-white">Kazakhstan</p>
+          </div>
+        </div>
+        <div class="col-2 mb-3 d-flex justify-content-center">
+          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+            <img src="media/flags/Vietnam.jpg" alt="Vietnam" class="img-fluid rounded"
+              style="width: 100%; height: 80px; object-fit: cover;">
+            <p class="mt-2 text-white">Vietnam</p>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="col-2 mb-3 d-flex justify-content-center">
+          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+            <img src="media/flags/qatar.png" alt="Qatar" class="img-fluid rounded"
+              style="width: 100%; height: 80px; object-fit: cover;">
+            <p class="mt-2 text-white">Qatar</p>
+          </div>
+        </div>
+        <div class="col-2 mb-3 d-flex justify-content-center">
+          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+            <img src="media/flags/USA.png" alt="USA" class="img-fluid rounded"
+              style="width: 100%; height: 80px; object-fit: cover;">
+            <p class="mt-2 text-white">USA</p>
+          </div>
+        </div>
+        <div class="col-2 mb-3 d-flex justify-content-center">
+          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+            <img src="media/flags/maldives.png" alt="Maldives" class="img-fluid rounded"
+              style="width: 100%; height: 80px; object-fit: cover;">
+            <p class="mt-2 text-white">Maldives</p>
+          </div>
+        </div>
+        <div class="col-2 mb-3 d-flex justify-content-center">
+          <div class="country-item p-2 bg-dark rounded shadow-sm text-center">
+            <img src="media/flags/saudi_arab.png" alt="Saudi Arab" class="img-fluid rounded"
+              style="width: 100%; height: 80px; object-fit: cover;">
+            <p class="mt-2 text-white">Saudi Arab</p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </section>
+
+
+
+
+
+  <section class="container-fluid text-center px-5 pt-5 pb-5" id="portfolio">
+    <h2 style="font-weight: 2.5rem; font-weight: bold;" class="pb-4 ">Our Casting Projects</h2>
+
+    <!-- <p>Explore my work as a casting director.</p> -->
+    <a href="casting.html" class="btn btn-custom">View Casting Projects</a>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section id="contact" class="section pt-5">
+    <div class="container">
+      <div class="contact-section">
+        <h2 class="section-title text-center">Connect with us</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <form id="contact-form">
+              <div class="mb-4">
+                <input type="text" class="form-control" name="user_name" placeholder="Your Name" required />
+              </div>
+              <div class="mb-4">
+                <input type="email" class="form-control" name="user_email" placeholder="Your Email" required />
+              </div>
+              <div class="mb-4">
+                <textarea class="form-control" rows="5" name="message" placeholder="Description" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-custom w-100">Send Message</button>
+            </form>
+            <p id="response-message" class="text-center mt-3"></p>
+          </div>
+          <div class="col-lg-6 mt-5 mt-lg-0">
+            <div class="contact-info">
+              <h4>Contact</h4>
+              <p>+91 9893030627 <br>+971 55 583 6970 <br> pictureshuruproduction@gmail.com</p>
+              <div class="social-links mt-4">
+                <a href="https://instagram.com/yourprofile" class="btn btn-outline-light btn-social">
+                  <i class="fab fa-instagram"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </body>
+</body>
+
 </html>
