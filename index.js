@@ -26,38 +26,33 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav-link");
   const sections = document.querySelectorAll("section");
 
-  // Function to update active nav-link based on h2 visibility
-  function updateActiveNavLink(entries, observer) {
-    entries.forEach(entry => {
-      const link = document.querySelector(`.nav-link[href="#${entry.target.closest('section').id}"]`);
-      
-      // Add active class when h2 inside section is in view
-      if (entry.isIntersecting) {
-        // Remove the active class from all nav-links first
-        navLinks.forEach(link => link.classList.remove("active"));
-        
-        // Add the active class to the current nav-link
-        link.classList.add("active");
+  function updateActiveNavLink() {
+    let closestSection = null;
+    let minDistance = Infinity;
+
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      const distanceFromTop = Math.abs(rect.top);
+
+      if (distanceFromTop < minDistance) {
+        minDistance = distanceFromTop;
+        closestSection = section;
       }
     });
+
+    if (closestSection) {
+      const activeId = closestSection.id;
+      navLinks.forEach(link => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${activeId}`);
+      });
+    }
   }
 
-  // IntersectionObserver options
-  const observerOptions = {
-    rootMargin: "0px 0px -50% 0px",  // Trigger when 50% of h2 element is in the viewport
-    threshold: 0  // Trigger when 0% of the h2 element is visible
-  };
+  // Run when scrolling
+  window.addEventListener("scroll", updateActiveNavLink);
 
-  // Initialize IntersectionObserver for h2 elements inside each section
-  const observer = new IntersectionObserver(updateActiveNavLink, observerOptions);
-
-  // Observe each h2 element within the sections
-  sections.forEach(section => {
-    const h2 = section.querySelector('h2');  // Find h2 element inside each section
-    if (h2) {
-      observer.observe(h2);  // Observe the h2 element
-    }
-  });
+  // Run on page load
+  updateActiveNavLink();
 });
   // Navbar Scroll Effect
   window.addEventListener("scroll", function () {

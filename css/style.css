@@ -286,6 +286,7 @@ padding: 20px;
     /* margin: 4rem 0; */
   }
   #contact{
+    height: 800px;
     background-color: var(--primary);
     padding: 0px;
   
@@ -912,3 +913,10 @@ body {
     transform: translateY(0);
   }
 }
+
+
+footer{
+  background: var(--primary);
+}
+
+
