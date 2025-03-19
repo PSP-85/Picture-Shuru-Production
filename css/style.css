@@ -920,3 +920,9 @@ footer{
 }
 
 
+
+.lead-text {
+  color: var(--text);
+  font-size: 1.25rem; /* fs-5 in Bootstrap */
+  margin-bottom: 1rem; /* mb-4 in Bootstrap */
+}
