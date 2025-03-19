@@ -15,12 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Preloader
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function () {
   setTimeout(() => {
-      document.querySelector(".preloader").classList.add("hide");
-      // document.getElementById("main-content").style.display = "block";
-  }, 1000); // Adjust time as needed
-};
+    document.querySelector(".preloader").classList.add("hide");
+  }, 500); // Adjust delay as needed
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav-link");
