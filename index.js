@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 window.onload = function () {
   setTimeout(() => {
       document.querySelector(".preloader").classList.add("hide");
-      document.getElementById("main-content").style.display = "block";
+      // document.getElementById("main-content").style.display = "block";
   }, 1000); // Adjust time as needed
 };
 
