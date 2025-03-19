@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "autoprefixer": "^10.4.21",
+    "bootstrap": "^5.3.3",
+    "css-loader": "^7.1.2",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-loader": "^8.1.1",
+    "style-loader": "^4.0.0"
+  },
+"scripts": {
+  "build": "postcss css/**/*.css --dir dist/"
+}
+}
