@@ -1,3 +1,8 @@
+/* First: @import rule */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+
 :root {
     --primary: #0d0d0d; /* Deep black */
     --accent: rgb(233, 153, 62); /* Darker orange */
@@ -9,7 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
     
   }
 
@@ -49,7 +54,8 @@
     100% { transform: rotate(360deg); }
 }
   body {
-    font-family: "Inter", sans-serif;
+    /* font-family: "Inter", sans-serif; */
+    font-family: 'Roboto', sans-serif;
     background: var(--primary);
     color: var(--text);
     overflow-x: hidden;
@@ -134,9 +140,9 @@
 
   /* Hero Section Improvements */
   .hero-section {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
+    min-height: 100vh;
+  position: relative;
+  overflow: hidden;
   }
 
   .carousel-item {
@@ -587,13 +593,13 @@ font-size: 1.5rem;
 }
 
 /* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap'); */
 
-body {
+/* body {
   font-family: 'Montserrat', sans-serif;
   background-color: #111;
   color: #fff;
-}
+} */
 
 /* Section Styling */
 .section {
