@@ -333,7 +333,7 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
     console.log("Form data:", new FormData(this)); // Log form data to check
 
-    emailjs.sendForm("service_675iccb", "template_rmdnd6j", this).then(
+    emailjs.sendForm("service_ut03l4e", "template_rmdnd6j", this).then(
       function (response) {
         document.getElementById("response-message").innerHTML = "<span class='text-success'>Message Sent Successfully!</span>";
       },
